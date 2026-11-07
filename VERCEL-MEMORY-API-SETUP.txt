@@ -1,0 +1,10 @@
+Vercel Memory Challenge setup (v7.5.7)
+
+1. In Vercel, open Portfolio -> Settings -> Environment Variables.
+2. Add MEMORY_SESSION_SECRET for the Production environment.
+3. Generate the value locally with: openssl rand -hex 32
+4. Paste the generated value into Vercel. Do not commit it to GitHub or add it to app.js.
+5. Push the v7.5.7 code changes to the main branch and allow Vercel to redeploy.
+6. After deployment is Ready, open /api/memory/start in a browser only to see a JSON Method not allowed response (GET is intentionally unsupported); test the game from the Fun section instead.
+
+The Vercel config intentionally has no catch-all rewrite. Static assets are built to dist/ and api/memory/{start,guess,reward}.js are deployed as Node.js Functions. The reward ZIP is included only with the reward function.

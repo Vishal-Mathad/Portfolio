@@ -1,9 +1,9 @@
 {
   "name": "vishal-mathad-portfolio",
-  "version": "7.5.6",
+  "version": "7.5.7",
   "private": true,
   "type": "module",
-  "description": "Responsive portfolio with bounded 3D robot zoom and tuned desktop, tablet and mobile layouts.",
+  "description": "Responsive portfolio with a bounded 3D robot, Vercel-compatible signed memory challenge API, and gated source reward.",
   "engines": {
     "node": ">=20"
   },
@@ -13,6 +13,6 @@
     "build": "node build.mjs",
     "preview": "node server.mjs --dist",
     "test": "node --test tests/*.test.js",
-    "check": "node --check app.js && node --check server.mjs && node --check build.mjs && npm test"
+    "check": "node --check app.js && node --check server.mjs && node --check build.mjs && node --check lib/memory-session.js && node --check lib/vercel-http.js && node --check api/memory/start.js && node --check api/memory/guess.js && node --check api/memory/reward.js && npm test"
   }
 }

@@ -653,6 +653,13 @@ const projects = {
     phaseLabel.textContent = `${selectedLevel.toUpperCase()} difficulty`;
   }));
   const setStatus = (label, state = '') => { status.innerHTML = `<i></i> ${label}`; status.dataset.state = state; };
+  const readApiJson = async response => {
+    const contentType = response.headers.get('content-type') || '';
+    if (!contentType.toLowerCase().includes('application/json')) {
+      throw new Error('The memory challenge API did not return JSON. Please try again after the site update finishes.');
+    }
+    return response.json();
+  };
   const setProgress = () => { progressLabel.textContent = `${String(nextNumber - 1).padStart(2, '0')} / 20`; progressBar.style.width = `${(nextNumber - 1) * 5}%`; };
   const stopTimer = () => { if (timer) window.clearInterval(timer); timer = null; };
   const renderBoard = preview => {
@@ -692,15 +699,16 @@ const projects = {
     tile.disabled = true;
     try {
       const response = await fetch('/api/memory/guess', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ sessionId, index }) });
-      const data = await response.json();
+      const data = await readApiJson(response);
+      if (data.sessionId) sessionId = data.sessionId;
       if (!response.ok) { if (data.reason === 'too-early') { tile.disabled = false; return; } tile.classList.add('is-wrong'); endRun(data.message || 'Incorrect tile. The session has ended.'); return; }
       if (!data.correct) { tile.classList.add('is-wrong'); endRun('Wrong position. The protocol has terminated. Restart and try to remember the complete board.'); return; }
       tile.textContent = String(nextNumber); tile.classList.add('is-correct'); tile.setAttribute('aria-label', `Correct: ${nextNumber}`);
       nextNumber += 1; setProgress();
       if (data.complete && nextNumber === 21) unlock();
       else { phaseLabel.textContent = `Correct · next number ${nextNumber}`; setStatus('RECALL ACTIVE', 'active'); }
-    } catch {
-      tile.disabled = false; instructions.textContent = 'Could not reach the challenge server. Run the portfolio with npm run dev or npm start to play and unlock the reward.'; setStatus('SERVER UNAVAILABLE', 'error');
+    } catch (error) {
+      tile.disabled = false; instructions.textContent = error.message || 'Could not reach the challenge server. Please try again.'; setStatus('SERVER UNAVAILABLE', 'error');
     }
   };
   const start = async () => {
@@ -708,14 +716,14 @@ const projects = {
     nextNumber = 1; sessionId = ''; cells = []; phase = 'starting'; phaseLabel.textContent = 'Generating random board'; timerLabel.textContent = ({easy:'15.0s',medium:'12.0s',hard:'8.0s'})[selectedLevel];
     progressLabel.textContent = '00 / 20'; progressBar.style.width = '0%'; instructions.textContent = 'Preparing your randomized memory board…'; setStatus('INITIALIZING', 'active'); board.replaceChildren();
     try {
-      const response = await fetch('/api/memory/start', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ level: selectedLevel }) }); const data = await response.json();
+      const response = await fetch('/api/memory/start', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ level: selectedLevel }) }); const data = await readApiJson(response);
       if (!response.ok) throw new Error(data.message || 'Could not start challenge.');
       sessionId = data.sessionId; cells = data.cells; phase = 'preview'; phaseLabel.textContent = 'Memorize every position';
       previewMs = data.previewMs;
       instructions.textContent = `You have ${previewMs / 1000} seconds. Memorize where each number is. The board will flip automatically.`; setStatus(`PREVIEW / ${previewMs / 1000} SECONDS`, 'active');
       renderBoard(true); deadline = performance.now() + previewMs; updateTimer(); timer = window.setInterval(updateTimer, 50);
     } catch (error) {
-      phase = 'idle'; phaseLabel.textContent = 'Challenge unavailable'; instructions.textContent = `${error.message} Start the site using npm run dev so the reward can be validated securely.`;
+      phase = 'idle'; phaseLabel.textContent = 'Challenge unavailable'; instructions.textContent = error.message || 'The memory challenge service is temporarily unavailable. Please try again.';
       setStatus('SERVER UNAVAILABLE', 'error'); startButton.hidden = false;
     }
   };

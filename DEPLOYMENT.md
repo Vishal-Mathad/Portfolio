@@ -13,7 +13,9 @@ Use the included `netlify.toml`; build command: `npm run build`, publish directo
 
 ## Vercel
 
-Use the included `vercel.json`; build command: `npm run build`, output directory: `dist`.
+Use the included `vercel.json`; build command: `npm run build`, output directory: `dist`. The `/api/memory/*` routes are deployed as Vercel Node.js Functions, separately from the static files. The reward archive is bundled only into the reward function and is not copied into `dist/`.
+
+Before deploying, generate a cryptographically random value of at least 32 characters with `openssl rand -hex 32`. Add it in Vercel → Project Settings → Environment Variables as `MEMORY_SESSION_SECRET`, scoped to Production. Do not commit the value or put it in frontend code. The serverless challenge uses signed, expiring session tokens so it does not depend on a serverless instance's in-memory state. After adding the variable, redeploy the project.
 
 ## Local production preview
 
@@ -24,6 +26,6 @@ npm run preview
 
 The IAM lab and SYSTEM FAILURE game are client-side simulations; no cloud credentials or external service connection is required.
 
-## Memory challenge and source-code reward (v7.0.0)
+## Memory challenge and source-code reward (v7.5.7)
 
-The 20-tile game and source reward use the Node server routes in `server.mjs` (`/api/memory/start`, `/api/memory/guess`, and `/api/memory/reward`). Run the project with `npm run dev` or `npm start`. The source ZIP is stored in `private-rewards/`, is excluded from `dist/`, and direct `/private-rewards/*` requests are blocked. A static-only Netlify/Vercel publish of `dist/` does not execute these Node routes; use a Node-capable host or implement equivalent persistent serverless endpoints before enabling the live reward there.
+Local development continues to use the in-process Node routes in `server.mjs`. Vercel uses the dedicated Node.js Functions in `api/memory/`. These hosted routes use HMAC-signed session tokens so progress can be validated across stateless function invocations without an in-memory session map. Configure `MEMORY_SESSION_SECRET` in Vercel Production environment variables before deploying. The source ZIP is stored in `private-rewards/`, excluded from `dist/`, and bundled only into the protected reward function; direct static access to `/private-rewards/*` is not available.

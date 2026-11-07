@@ -1,7 +1,14 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
   "framework": null,
   "installCommand": "npm install",
   "buildCommand": "npm run build",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "functions": {
+    "api/memory/reward.js": {
+      "includeFiles": "private-rewards/portfolio-source-code.zip",
+      "maxDuration": 10
+    }
+  }
 }
