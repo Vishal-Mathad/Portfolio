@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090b">
+  <meta name="description" content="Vishal Mathad — Electronics and Telecommunication engineering student building backend, systems, cloud and platform engineering projects.">
+  <meta property="og:title" content="Vishal Mathad — Engineering at the Edge">
+  <meta property="og:description" content="Selected systems, backend, cloud and platform engineering work.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./og-preview.svg">
+  <title>Vishal Mathad — Engineering at the Edge</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="importmap" nonce="__CSP_NONCE__">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.1/examples/jsm/"}}</script>
+  <script type="module" src="./ghost-model.js"></script>
+  <script src="./app.js" defer></script>
+</head>
+<body class="is-loading">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="loader loader-index" id="loader" aria-live="polite" aria-label="Initializing portfolio">
+    <div class="loader-index-grain" aria-hidden="true"></div>
+    <div class="loader-index-shell">
+      <header class="loader-index-head"><span>VM / DIGITAL WORKSPACE</span><span>BOOT SEQUENCE <b id="loader-stage">01 — INDEXING</b></span></header>
+      <div class="loader-index-main">
+        <div class="loader-index-brand" aria-hidden="true"><span class="loader-index-number">06</span><span class="loader-index-monogram">V<span>.</span>M</span><span class="loader-index-caption">ENGINEERING<br>PORTFOLIO</span></div>
+        <div class="loader-index-content">
+          <p class="loader-index-kicker">SYSTEM INITIALIZATION / 2026</p>
+          <h1>Everything<br>in its <em>place.</em></h1>
+          <p class="loader-index-message" id="loader-signal-message">Indexing the workspace and loading components.</p>
+          <div class="loader-index-steps" aria-hidden="true"><span data-loader-step="0">01 <b>STRUCTURE</b><i></i></span><span data-loader-step="1">02 <b>INTERACTIONS</b><i></i></span><span data-loader-step="2">03 <b>VISUAL SYSTEM</b><i></i></span><span data-loader-step="3">04 <b>READY</b><i></i></span></div>
+        </div>
+      </div>
+      <footer class="loader-index-foot"><div class="loader-index-track"><i id="loader-bar"></i></div><strong id="loader-count">00%</strong><span>VISHAL MATHAD <b>—</b> DESIGN / ENGINEERING / SYSTEMS</span></footer>
+      <div class="loader-index-runners" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+    <button class="loader-skip" id="loader-skip" type="button">SKIP INTRO ↗</button>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <a class="brand" href="#home" aria-label="Vishal Mathad home">
+      <span class="brand-mark">V<span>.</span></span>
+      <span class="brand-name">VISHAL MATHAD</span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <a href="#home" class="is-active">HOME</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#techstack">TECH STACK</a>
+      <a href="#about">ABOUT</a>
+      <a href="#experience">EXPERIENCE</a>
+      <a href="#fun">FUN</a>
+      <a href="#contact" class="nav-contact">CONTACT <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- 01 / HOME -->
+    <section class="hero scene scene-dark" id="home" data-scene="home" aria-labelledby="hero-title">
+      <canvas id="network-canvas" class="network-canvas" aria-hidden="true"></canvas>
+      <div class="hero-shell">
+        <div class="hero-meta reveal"><span>PORTFOLIO / 2026</span><span>PUNE, INDIA · 18°31′ N / 73°51′ E</span></div>
+        <div class="hero-main">
+          <div class="hero-copy reveal">
+            <div class="eyebrow"><i></i> BACKEND · SYSTEMS · CLOUD</div>
+            <h1 id="hero-title">ENGINEERING<br><em>AT THE EDGE.</em></h1>
+            <p class="hero-intro">I build systems that stay understandable under pressure — from low-level observability to reliable cloud platforms.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects" data-transition-link>EXPLORE MY WORK <span>↗</span></a>
+              <a class="button button-quiet" href="./public/resume.pdf" target="_blank" rel="noopener">VIEW RESUME <span>↗</span></a>
+            </div>
+          </div>
+          <div class="hero-orbit-panel reveal" aria-label="Interactive 3D red ghost model surrounded by the portfolio signal map. Drag to rotate and use scroll or pinch to zoom within safe limits.">
+            <div class="hero-orbit-label label-top"><span>NETWORK / 01</span><b>LIVE SIGNAL MAP</b></div>
+            <div class="hero-orbit-ring ring-one" aria-hidden="true"></div>
+            <div class="hero-orbit-ring ring-two" aria-hidden="true"></div>
+            <div class="hero-orbit-ring ring-three" aria-hidden="true"></div>
+            <div id="hero-ghost-stage" class="hero-ghost-stage" aria-label="3D red ghost model"></div>
+            <div class="hero-node node-a"><i></i><span>OBSERVE</span></div>
+            <div class="hero-node node-b"><i></i><span>CONNECT</span></div>
+            <div class="hero-node node-c"><i></i><span>DELIVER</span></div>
+            <div class="hero-orbit-label label-bottom"><span>SYS / 004</span><b>FROM SIGNAL TO SYSTEM</b></div>
+          </div>
+        </div>
+        <div class="hero-bottom reveal"><span>SCROLL TO EXPLORE <b>↓</b></span><span>DESIGNING / BUILDING / UNDERSTANDING</span><span>01 — 07</span></div>
+      </div>
+    </section>
+
+    <!-- 02 / PROJECTS -->
+    <section class="projects-section scene scene-light" id="projects" data-scene="projects" aria-labelledby="projects-title">
+      <div class="section-shell">
+        <div class="section-stamp reveal"><span>02 / SELECTED WORK</span><span>FOUR SYSTEMS / BUILT WITH INTENT</span></div>
+        <div class="section-heading projects-heading reveal">
+          <div><div class="eyebrow eyebrow-dark"><i></i> SYSTEMS IN PRACTICE</div><h2 id="projects-title">Built to solve<br><em>real problems.</em></h2></div>
+          <p>Projects across platform engineering, identity governance, secure developer tooling and explainable financial monitoring.</p>
+        </div>
+        <div class="project-grid" id="project-grid">
+          <article class="project-card project-k8s" data-project="k8s" data-tilt tabindex="0" role="group" aria-label="Open Chaos-Driven Self-Healing Kubernetes Platform details">
+            <div class="project-visual visual-k8s" aria-hidden="true">
+              <div class="visual-topline"><span>CLUSTER / 01</span><span class="status-live"><i></i> HEALTHY</span></div>
+              <div class="cluster-map" role="img" aria-label="Kubernetes controller connected to three healthy worker pods">
+                <svg class="cluster-links" viewBox="0 0 600 250" preserveAspectRatio="none" aria-hidden="true">
+                  <path class="cluster-link" d="M300 125 C230 94 150 43 71 32"/><path class="cluster-link" d="M300 125 C370 94 450 43 529 32"/><path class="cluster-link" d="M300 125 L300 218"/>
+                  <path class="cluster-packet packet-a" d="M300 125 C230 94 150 43 71 32"/><path class="cluster-packet packet-b" d="M300 125 C370 94 450 43 529 32"/><path class="cluster-packet packet-c" d="M300 125 L300 218"/>
+                </svg>
+                <div class="cluster-hub"><span class="hub-pulse"></span><b>CTRL</b><small>DEPLOYMENT</small></div>
+                <div class="pod pod-a"><span class="pod-cube"><i></i><b></b><em></em></span><span class="pod-copy"><b>worker-01</b><small><i></i> RUNNING · 0.8 CPU</small></span></div>
+                <div class="pod pod-b"><span class="pod-cube"><i></i><b></b><em></em></span><span class="pod-copy"><b>worker-02</b><small><i></i> RUNNING · 0.6 CPU</small></span></div>
+                <div class="pod pod-c"><span class="pod-cube"><i></i><b></b><em></em></span><span class="pod-copy"><b>worker-03</b><small><i></i> RUNNING · 0.7 CPU</small></span></div>
+              </div>
+              <div class="visual-footline"><span>HPA / 03—06 REPLICAS</span><span>CPU 60%</span></div>
+            </div>
+            <div class="project-info"><div class="project-meta"><span>01 / PLATFORM ENGINEERING</span><span>SEP 2026</span></div><h3>Chaos-Driven Self-Healing<br>Kubernetes Platform</h3><p>Controlled failure injection, workload recovery and observable resilience across a Kubernetes cluster.</p><div class="project-tags"><span>Go</span><span>Docker</span><span>Kubernetes</span><span>Helm</span><span>Prometheus</span></div><button class="project-open" type="button" data-project-open="k8s">VIEW PROJECT <b>↗</b></button></div>
+          </article>
+
+          <article class="project-card project-iam" data-project="iam" data-tilt tabindex="0" role="group" aria-label="Open IAM Access Governance Platform details">
+            <div class="project-visual visual-iam" aria-label="Interactive IAM access review demo">
+              <div class="visual-topline"><span>IDENTITY GOVERNANCE / 02</span><span class="status-warn"><i></i> ACCESS REVIEW</span></div>
+              <div class="iam-quick-review" id="iam-lab">
+                <div class="iam-review-heading"><div><small>REVIEW CAMPAIGN</small><b>Quarterly access check</b></div><span class="iam-review-count" id="iam-review-count">01 / 03</span></div>
+                <div class="iam-review-person"><span class="iam-review-avatar" id="iam-avatar">MA</span><div><small>PRINCIPAL UNDER REVIEW</small><b id="iam-selected-name">maya.analyst</b><span id="iam-selected-type">IAM USER · FINANCE</span></div><div class="iam-review-risk"><small>RISK</small><strong id="iam-risk-score">42</strong></div></div>
+                <div class="iam-review-access"><span>REQUESTED ACCESS</span><b id="iam-access-label">S3 reports · Read + IAM PassRole</b><small id="iam-risk-note">Elevated: role-passing permission exceeds analyst duties.</small></div>
+                <div class="iam-review-controls"><button type="button" class="iam-review-step is-active" data-iam-principal="analyst" aria-pressed="true">MAYA</button><button type="button" class="iam-review-step" data-iam-principal="platform" aria-pressed="false">PLATFORM</button><button type="button" class="iam-review-step" data-iam-principal="runner" aria-pressed="false">CI BOT</button><span class="iam-review-spacer"></span><button type="button" class="iam-review-decision" data-iam-decision="keep">KEEP</button><button type="button" class="iam-review-decision" data-iam-decision="revoke">REVOKE</button></div>
+                <div class="iam-review-feedback" id="iam-audit-log" aria-live="polite">Select a principal, then keep or revoke the access.</div>
+              </div>
+              <div class="visual-footline"><span>SIMULATED ACCESS REVIEW</span><span>NO LIVE AWS CHANGES</span></div>
+            </div>
+            <div class="project-info"><div class="project-meta"><span>02 / CLOUD SECURITY</span><span>SEP 2026</span></div><h3>IAM Access<br>Governance Platform</h3><p>Inventory, effective-permission analysis, review campaigns and approval-gated remediation for AWS IAM.</p><div class="project-tags"><span>FastAPI</span><span>PostgreSQL</span><span>AWS IAM</span><span>Redis</span><span>React</span></div><button class="project-open" type="button" data-project-open="iam">VIEW PROJECT <b>↗</b></button></div>
+          </article>
+
+          <article class="project-card project-git" data-project="git" data-tilt tabindex="0" role="group" aria-label="Open Git Hosting Server over SSH details">
+            <div class="project-visual visual-git" aria-label="Interactive Git over SSH terminal demonstration">
+              <div class="visual-topline"><span>SSH / 03</span><span class="status-live"><i></i> CONNECTED</span></div>
+              <div class="terminal-window" data-git-demo tabindex="0" role="group" aria-label="Hover or focus to play the Git over SSH terminal demonstration"><div class="terminal-head"><i></i><i></i><i></i><span>git-host / session</span><small>HOVER TO RUN</small></div><div class="terminal-body" id="git-terminal" aria-hidden="true"><p class="terminal-hint">HOVER TO START SESSION <span>↗</span></p><p class="terminal-cursor">_</p></div></div>
+              <div class="visual-footline"><span>CLONE / FETCH / PUSH</span><span>READ · WRITE ACL</span></div>
+            </div>
+            <div class="project-info"><div class="project-meta"><span>03 / DEVELOPER TOOLING</span><span>OCT 2026</span></div><h3>Git Hosting Server<br>over SSH</h3><p>Native Git transport over SSH with repository isolation, permission checks and safe command execution.</p><div class="project-tags"><span>Go</span><span>PostgreSQL</span><span>SSH</span><span>Git</span></div><button class="project-open" type="button" data-project-open="git">VIEW PROJECT <b>↗</b></button></div>
+          </article>
+
+          <article class="project-card project-aml" data-project="aml" data-tilt tabindex="0" role="group" aria-label="Open Anti-Money-Laundering Monitor details">
+            <div class="project-visual visual-aml" aria-label="Interactive AML transaction risk scan. Run the scan to watch transactions being scored and suspicious activity identified.">
+              <div class="visual-topline"><span>TRANSACTION MONITOR / 04</span><span class="status-warn"><i></i> <b id="aml-state" aria-live="polite">READY TO ANALYSE</b></span></div>
+              <div class="aml-visual">
+                <div class="aml-pipeline" id="aml-pipeline" aria-label="Transaction analysis stages"><span class="is-current">INGEST</span><i>›</i><span>FEATURES</span><i>›</i><span>SCORE</span><i>›</i><span>EXPLAIN</span></div>
+                <div class="aml-score"><small>TRANSACTIONS PROCESSED</small><strong id="aml-count">—</strong><em id="aml-dataset-label">NO SCAN RUN · SYNTHETIC DEMO</em><div class="aml-scan-progress" id="aml-progress-track" role="progressbar" aria-label="Synthetic transaction analysis progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="aml-progress"></i></div><div class="aml-risk-readout">CALCULATED RISK INDEX <b id="aml-risk">—</b></div></div>
+                <div class="aml-chart-wrap"><div class="aml-chart-labels"><span>RISK DISTRIBUTION</span><span>SYNTHETIC PREVIEW</span></div><div class="aml-bars" id="aml-bars"><i style="--bar:0%"></i><i style="--bar:0%"></i><i style="--bar:0%"></i><i style="--bar:0%"></i><i style="--bar:0%"></i><i style="--bar:0%"></i><i style="--bar:0%"></i><i style="--bar:0%"></i><i style="--bar:0%"></i></div></div>
+                <div class="aml-alert" id="aml-alert" data-level="idle"><b>·</b><span id="aml-alert-text">AWAITING ANALYSIS<br><small>NO RESULT YET</small></span></div>
+              </div>
+              <div class="visual-footline"><span>MODEL / EXPLAINABILITY</span><button class="aml-run-button" id="aml-run" type="button">RUN ANALYSIS <b>↗</b></button></div>
+            </div>
+            <div class="project-info"><div class="project-meta"><span>04 / DATA & MACHINE LEARNING</span><span>JUL 2026</span></div><h3>Anti-Money-Laundering<br>Monitor</h3><p>Leakage-aware transaction scoring with explainable risk signals, threshold tuning and analyst feedback.</p><div class="project-tags"><span>FastAPI</span><span>PostgreSQL</span><span>XGBoost</span><span>Scikit-learn</span><span>SHAP</span></div><button class="project-open" type="button" data-project-open="aml">VIEW PROJECT <b>↗</b></button></div>
+          </article>
+        </div>
+        <div class="section-endline reveal"><span>SELECTED WORK / 04 PROJECTS</span><span>BUILT TO BE UNDERSTOOD <b>↗</b></span></div>
+      </div>
+    </section>
+
+    <!-- 03 / TECH STACK -->
+    <section class="tech-section scene scene-dark" id="techstack" data-scene="techstack" aria-labelledby="tech-title">
+      <div class="section-shell">
+        <div class="section-stamp section-stamp-light reveal"><span>03 / TECHNOLOGY</span><span>TOOLS / LANGUAGES / FOUNDATIONS</span></div>
+        <div class="section-heading tech-heading reveal"><div><div class="eyebrow"><i></i> THE STACK BEHIND THE SYSTEMS</div><h2 id="tech-title">Tools I use.<br><em>Systems I build.</em></h2></div><p>The technologies below are taken from my resume and grouped by how I use them across backend, cloud, data and engineering work.</p></div>
+        <div class="tech-explorer reveal" id="tech-explorer">
+          <div class="tech-wheel" id="tech-wheel" aria-label="Choose a technology category">
+            <div class="tech-wheel-ring ring-outer"></div><div class="tech-wheel-ring ring-middle"></div><div class="tech-wheel-ring ring-inner"></div>
+            <div class="tech-wheel-nodes" id="tech-wheel-nodes" role="tablist" aria-label="Technology categories"></div>
+            <div class="tech-wheel-core"><small>STACK / SELECTED</small><b id="tech-wheel-count">05</b><strong id="tech-wheel-active">BACKEND</strong><span>CHOOSE AN ORBIT</span></div>
+          </div>
+          <div class="tech-detail" id="tech-detail" role="tabpanel" aria-live="polite">
+            <div class="tech-detail-head"><span id="tech-detail-kicker">02 / SERVICES</span><h3 id="tech-detail-title">Backend & Web</h3><p id="tech-detail-description">The frameworks and services I use to build APIs and distributed application backends.</p></div>
+            <div class="tech-detail-items" id="tech-detail-items"></div>
+            <div class="tech-detail-foot"><span>SELECT ANOTHER ORBIT TO EXPLORE</span><b id="tech-detail-count">05 TECHNOLOGIES</b></div>
+          </div>
+        </div>
+        <div class="tech-marquee" aria-label="Technology logo marquee"><div class="tech-marquee-track" id="tech-marquee-track"></div></div>
+        <div class="tech-foundations reveal"><span>ENGINEERING FOUNDATIONS</span><div><b>Data Structures & Algorithms</b><b>Database Management System</b><b>Operating Systems</b><b>Computer Networks</b><b>Object Oriented Programming</b><b>System Design</b></div></div>
+        <div class="section-endline section-endline-light reveal"><span>TECHNOLOGY / LEARNED & APPLIED</span><span>DRAG THE ORBIT TO EXPLORE <b>↗</b></span></div>
+      </div>
+    </section>
+
+    <!-- 04 / ABOUT -->
+    <section class="about-section scene scene-light" id="about" data-scene="about" aria-labelledby="about-title">
+      <div class="section-shell">
+        <div class="section-stamp reveal"><span>04 / ABOUT ME</span><span>EDUCATION / INTEREST / APPROACH</span></div>
+        <div class="about-layout">
+          <div class="about-heading reveal"><div class="eyebrow eyebrow-dark"><i></i> A LITTLE CONTEXT</div><h2 id="about-title">Curious by<br>nature. <em>Engineer<br>by practice.</em></h2><div class="about-seal"><span>BE / E&TC</span><b>2027</b><small>ARMY INSTITUTE OF TECHNOLOGY</small></div></div>
+          <div class="about-copy reveal"><p class="about-lead">I’m Vishal — an Electronics & Telecommunication engineering student at Army Institute of Technology, Pune.</p><p>I’m drawn to backend and systems engineering: the parts of software that make products reliable, observable and practical to operate. I learn by building, debugging and understanding why a system behaves the way it does.</p><p>My interests sit across Linux, networking, cloud infrastructure, distributed systems and the engineering decisions that keep complex software understandable.</p><div class="about-facts"><div><small>EDUCATION</small><b>B.E. Electronics & Telecommunication</b><span>Army Institute of Technology · Aug 2023 – June 2027</span></div><div><small>BASED IN</small><b>Pune, Maharashtra</b><span>India</span></div><div><small>EARLIER EDUCATION</small><b>Army Public School</b><span>Higher Secondary · 2021–2022 · 90%</span></div><div><small>WORKING STYLE</small><b>Build · Debug · Understand</b><span>Learn by making systems observable</span></div></div><a class="text-link text-link-dark" href="./public/resume.pdf" target="_blank" rel="noopener">OPEN MY RESUME <span>↗</span></a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 / EXPERIENCE & CO-CURRICULAR -->
+    <section class="experience-section scene scene-dark" id="experience" data-scene="experience" aria-labelledby="experience-title">
+      <div class="section-shell">
+        <div class="section-stamp section-stamp-light reveal"><span>05 / EXPERIENCE & CO-CURRICULAR</span><span>LEADERSHIP / PARTICIPATION / ACHIEVEMENT</span></div>
+        <div class="section-heading experience-heading reveal"><div><div class="eyebrow"><i></i> BEYOND THE BUILD</div><h2 id="experience-title">People, practice<br>and <em>perspective.</em></h2></div><p>Leadership and activities that sit alongside my engineering work.</p></div>
+        <div class="experience-layout">
+          <article class="experience-feature reveal"><div class="experience-feature-top"><span>LEADERSHIP / 01</span><span>APR 2025 — APR 2026</span></div><div class="experience-emblem">SC<span>+</span></div><div class="experience-feature-copy"><small>ARMY INSTITUTE OF TECHNOLOGY</small><h3>Secretary, Spiritual Club</h3><p>Led the planning and execution of 10+ student events, coordinating teams, logistics and event operations. Collaborated with Heartfulness to organize a meditation camp for 200+ students, contributing to a 30% increase in participation in wellness activities.</p></div><div class="experience-feature-bottom"><b>10+ EVENTS</b><b>200+ STUDENTS</b><b>30% PARTICIPATION GROWTH</b></div></article>
+          <div class="co-curricular">
+            <div class="co-head reveal"><span>CO-CURRICULAR / 02</span><span>SELECTED HIGHLIGHTS</span></div>
+            <article class="highlight-row reveal"><div class="highlight-index">01</div><div><h3>Chess tournaments</h3><p>Participated in multiple tournaments and achieved a peak rating of 1592.</p></div><strong>1592</strong></article>
+            <article class="highlight-row reveal"><div class="highlight-index">02</div><div><h3>Problem solving</h3><p>Solved 400+ problems across LeetCode, Codeforces and GeeksforGeeks.</p></div><strong>400+</strong></article>
+            <article class="highlight-row reveal"><div class="highlight-index">03</div><div><h3>PMSS Scholarship</h3><p>Awarded the scholarship for academic excellence.</p></div><strong>AWARD</strong></article>
+            <article class="highlight-row reveal"><div class="highlight-index">04</div><div><h3>International Youth Summit</h3><p>Attended “Rising With Kindness” at Kanha Shanti Vanam, organized by Heartfulness.</p></div><strong>3 DAYS</strong></article>
+            <article class="highlight-row reveal"><div class="highlight-index">05</div><div><h3>Financial literacy</h3><p>Participated in seminars focused on financial literacy and personal finance.</p></div><strong>LEARN</strong></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 / FUN -->
+    <section class="fun-section scene scene-dark" id="fun" data-scene="fun" aria-labelledby="fun-title">
+      <div class="section-shell">
+        <div class="section-stamp section-stamp-light reveal"><span>06 / PLAY MODE</span><span>MEMORY PROTOCOL / 20 TILES</span></div>
+        <div class="section-heading fun-heading reveal"><div><div class="eyebrow"><i></i> MEMORY PROTOCOL INITIATED</div><h2 id="fun-title">TRUST YOUR<br><em>MEMORY.</em></h2></div><p>Study a shuffled board of 20 numbers for the selected time. The numbers disappear; then find them in ascending order. One wrong tile ends the run. Clear all 20 to unlock the complete portfolio source-code package.</p></div>
+        <div class="memory-game reveal" id="memory-game">
+          <div class="memory-topbar"><div class="memory-window-dots"><i></i><i></i><i></i></div><span>VM / MEMORY PROTOCOL</span><b id="memory-status"><i></i> STANDBY</b></div>
+          <div class="memory-meta"><div><span class="memory-label">PHASE</span><strong id="memory-phase">Awaiting operator</strong></div><div><span class="memory-label">TIME / PREVIEW</span><strong id="memory-timer">15.0s</strong></div><div><span class="memory-label">PROGRESS</span><strong id="memory-progress">00 / 20</strong></div></div>
+          <div class="memory-levels" role="group" aria-label="Choose difficulty">
+<button type="button" class="memory-level is-selected" data-level="easy" aria-pressed="true"><b>EASY</b><span>15 SEC</span></button>
+<button type="button" class="memory-level" data-level="medium" aria-pressed="false"><b>MEDIUM</b><span>12 SEC</span></button>
+<button type="button" class="memory-level" data-level="hard" aria-pressed="false"><b>HARD</b><span>8 SEC</span></button></div>
+<div class="memory-instructions" id="memory-instructions">Memorize the position of all 20 numbers. When the board flips, select 1 through 20 in order.</div>
+          <div class="memory-board" id="memory-board" aria-label="Memory game board" aria-live="polite"></div>
+          <div class="memory-bottom"><div class="memory-progress-track"><i id="memory-progress-bar"></i></div><div class="memory-controls"><span>ONE MISTAKE = SESSION TERMINATED</span><button type="button" class="button button-primary" id="memory-start">INITIALIZE CHALLENGE ↗</button><button type="button" class="button button-secondary" id="memory-restart" hidden>RESTART ↻</button></div></div>
+          <div class="memory-result" id="memory-result" hidden aria-live="polite"><b id="memory-result-title">SOURCE VAULT UNLOCKED</b><p id="memory-result-copy"></p><div class="memory-vault-card"><span>REWARD / FULL SOURCE ACCESS</span><strong>VISHAL'S PORTFOLIO <em>CODEBASE</em></strong><small>Complete source · styles · scripts · assets · build and setup files</small></div><a class="memory-download" id="memory-download" href="/api/memory/reward" hidden>DOWNLOAD COMPLETE CODEBASE ↧</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 / CONTACT -->
+    <section class="contact-section scene scene-dark" id="contact" data-scene="contact" aria-labelledby="contact-title">
+      <div class="contact-horizon" aria-hidden="true"></div><div class="contact-sun" aria-hidden="true"></div><div class="contact-grid" aria-hidden="true"></div>
+      <div class="section-shell contact-shell">
+        <div class="section-stamp section-stamp-light reveal"><span>07 / CONTACT ME</span><span>OPEN TO GOOD CONVERSATIONS</span></div>
+        <div class="contact-content reveal"><div class="eyebrow"><i></i> HAVE A SYSTEM TO BUILD?</div><h2 id="contact-title">Let’s make<br><em>something work.</em></h2><p>Have an opportunity, a technical idea or a system worth exploring? I’d be glad to hear from you.</p><a class="button button-primary contact-button" href="mailto:vishalmathad40@gmail.com">GET IN TOUCH <span>↗</span></a><div class="contact-links"><a href="mailto:vishalmathad40@gmail.com">VISHALMATHAD40@GMAIL.COM</a><a href="https://github.com/Vishal-Mathad" target="_blank" rel="noopener">GITHUB ↗</a><a href="./public/resume.pdf" target="_blank" rel="noopener">RESUME ↗</a></div></div>
+        <div class="contact-endline"><span>VISHAL MATHAD / PUNE, INDIA</span><a href="#home" data-transition-link>BACK TO TOP ↑</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>© 2026 VISHAL MATHAD</span><span>BUILT WITH CURIOSITY / 07 SECTIONS</span><span>ENGINEERING AT THE EDGE</span></footer>
+
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
+    <form method="dialog"><button class="dialog-close" aria-label="Close project details">×</button></form>
+    <div class="dialog-kicker" id="dialog-kicker"></div><h2 id="dialog-title"></h2><p id="dialog-description"></p><div class="dialog-points" id="dialog-points"></div><div class="dialog-stack" id="dialog-stack"></div>
+  </dialog>
+</body>
+</html>
